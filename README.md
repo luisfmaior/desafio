@@ -2,7 +2,7 @@
 
 **Configurações antes de codificar**
 
-1 - No arquivo 'DeefineCredenciais.php' definir as variaveis de acordo com as configurações do seu banco de dados local.
+1 - No arquivo 'DefineCredenciais.php' definir as variaveis de acordo com as configurações do seu banco de dados local.
 
 2 - Criar um banco de dados chamado entrevista.
 
