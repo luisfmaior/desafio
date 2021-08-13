@@ -34,14 +34,16 @@
 
 3 - Criar menu com acesso as telas de cadastro e listagem.
 
+4 - Criar CRUD de perfil e fazer o relacionamento com usuário
+
 **Melhorias não obrigatórias - Pontos Extras**
 
 1 - Exibir na listagem o perfil do usuário
 
 2 - Incluir e usar a biblioteca Bootstrap ou Materialize
 
-3 - Incluir e usar a biblioteca Jquery
+3 - Incluir e usar a biblioteca Jquery ou Vue JS
 
-4 - Criar CRUD de perfil e fazer o relacionamento com usuário
+4 - Nesta tela de instruções, criar checkbox para marcar que a tarefa foi concluida e salvar este estado sem usar a session do PHP e nem o banco de dados.
 
-5 - Nesta tela de instruções, criar checkbox para marcar que a tarefa foi concluida e salvar este estado sem usar a session do PHP e nem o banco de dados.
+5 - criar este mesmo projeto, só que utilizando o framework laravel
