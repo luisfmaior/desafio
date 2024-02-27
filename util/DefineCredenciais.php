@@ -1,7 +1,7 @@
 <?php
-define("HOST_BD","DEFINA_SEU_HOST");
-define("PORT_BD","DEFINA_SUA_PORTA");
+define("HOST_BD","127.0.0.1");
+define("PORT_BD","3306");
 define("NAME_BD","entrevista");
-define("USER_BD","DEFINA_SEU_USUARIO");
-define("KEY_BD","DEFINA_SUA_SENHA");
+define("USER_BD","root");
+define("KEY_BD","canoas@123");
 ?>

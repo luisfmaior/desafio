@@ -1,6 +1,9 @@
 <?php 
 include_once 'Header.php';
+include_once 'Filter.php';
+include DIR_UTIL . 'Mask.php';
 include_once DIR_PERSISTENCIA . 'UsuarioDAO.class.php';
+
 
 $dao = new UsuarioDAO();
 ?>
@@ -10,11 +13,12 @@ $dao = new UsuarioDAO();
         <table>
             <thead>
                 <tr>
-                    <th width="35%">Nome</th>
-                    <th width="10%">CPF</th>
-                    <th width="35%">Email</th>
-                    <th width="8%">Status</th>
-                    <th width="40%">Data de Cadastro</th>
+                    <th width="25%">Nome</th>
+                    <th width="16%">CPF</th>
+                    <th width="21%">Email</th>
+                    <th width="6%">Status</th>
+                    <th width="14%">Data de Cadastro</th>
+                    <th width="18%">Ações</th>
                 </tr>
             </thead>
 
@@ -22,14 +26,29 @@ $dao = new UsuarioDAO();
                 <?php foreach ($dao->listar() as $usuario) { ?>
                 <tr>
                     <td><?=$usuario->getNmUsuario()?></td>
-                    <td><?=$usuario->getNrCpf()?></td>
+                    <td><?=mask($usuario->getNrCpf(), '###.###.###-##')?></td>
                     <td><?=$usuario->getDsEmail()?></td>
                     <td><?=$usuario->getAoStatus() ? "Ativo" : "Inativo" ?></td>
-                    <td><?=$usuario->getDtCadastro()?></td>
+                    <td><?=date('d/m/Y', strtotime($usuario->getDtCadastro()))?></td>
+                    <td>    
+                        <button type="submit" onclick="window.location.href='../index.php'">Editar</button>
+                        <button type="submit">Deletar</button>
+                    </td>
                 </tr>
+
+    
                 <?php } ?>
             </tbody>
+
+            
         </table>
+        <div>
+    <button type="submit" onclick="window.location.href='GuiCadastroUsuario.php'">Cadastrar</button>
+
+    </div>
+    </div>
+
+    <div>
     </div>
 </div>
 

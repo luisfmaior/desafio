@@ -45,9 +45,11 @@ include_once DIR_MODELO . 'UsuarioVO.class.php';
     
         <div class="botoes">
             <button type="submit" class="">Salvar</button>
-            <button type="button">Voltar</button>
+            <button type="submit" onclick="window.location.href='../index.php'">Voltar</button>
         </div>
     </form>
+    <button type="submit" onclick="window.location.href='GuiUsuarios.php'">Voltar</button>
+
 </div>
 
 <?php

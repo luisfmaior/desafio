@@ -23,24 +23,24 @@ include_once DIR_UTIL . 'Define.php';
                 <h2>Instruções</h2>
                 <p><strong>Configurações antes de codificar</strong></p>
                 <p>
-                    1 - No arquivo 'DefineCredenciais.php' definir as variaveis de acordo com as configurações do seu banco de dados local.
+                    1 - No arquivo 'DefineCredenciais.php' definir as variaveis de acordo com as configurações do seu banco de dados local. ✓
                     <p class="font10"></p>
                 </p>
                 <p>
-                    2 - Criar um banco de dados chamado entrevista.
+                    2 - Criar um banco de dados chamado entrevista. ✓
                     <p class="font10"></p>
                 </p>
                 <p>
-                    3 - Importar os dados do arquivo 'entrevista.sql'.
+                    3 - Importar os dados do arquivo 'entrevista.sql'. ✓
                     <p class="font10"></p>
                 </p>
                 <p><strong>Modificar Tela de Listagem de Usuários</strong></p>
                 <p>
-                    1 - Exibir a data de cadastro no formato DD/MM/AAAA
+                    1 - Exibir a data de cadastro no formato DD/MM/AAAA ✓
                     <p class="font10"></p>
                 </p>
                 <p>
-                    2 - Ter uma coluna de ações, com botões para editar e deletar
+                    2 - Ter uma coluna de ações, com botões para editar e deletar ✓
                     <p class="font10"></p>
                 </p>
                 <p>
@@ -52,7 +52,7 @@ include_once DIR_UTIL . 'Define.php';
                     <p class="font10"></p>      
                 </p>
                 <p>
-                    5 - Exibir CPF no padrão ###.###.###-##
+                    5 - Exibir CPF no padrão ###.###.###-## ✓
                     <p class="font10"></p>      
                 </p>
                 <br>

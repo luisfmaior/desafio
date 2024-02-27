@@ -16,3 +16,14 @@ footer{
     bottom:0;
     width:100%;
 }
+
+.container-filter {
+    width: 85%;
+    text-align: center;
+}
+
+h3{
+    background-color:#006b85;
+    color: white;
+}
+
