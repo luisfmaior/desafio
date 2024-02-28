@@ -44,7 +44,7 @@ include_once DIR_UTIL . 'Define.php';
                     <p class="font10"></p>
                 </p>
                 <p>
-                    3 - Em caso de não trazer registro, ter uma mensagem "nenhum registro encontrado" e não exibir a mensagem
+                    3 - Em caso de não trazer registro, ter uma mensagem "nenhum registro encontrado" e não exibir a mensagem ✓
                     <p class="font10"></p>      
                 </p>
                 <p>
@@ -68,7 +68,7 @@ include_once DIR_UTIL . 'Define.php';
                 <br>
                 <p><strong>Novas Funcionalidades</strong></p>
                 <p>
-                    1 - Possibilitar deletar registro
+                    1 - Possibilitar deletar registro ✓
                     <p class="font10"></p>      
                 </p>
                 <p>

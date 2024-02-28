@@ -10,20 +10,27 @@ $dao = new UsuarioDAO();
 
 <div class="conteudo">
     <div class="listagem" style="background: #fcfcfc; margin: 2em auto;width:85%;">
-        <table>
-            <thead>
-                <tr>
-                    <th width="25%">Nome</th>
-                    <th width="16%">CPF</th>
-                    <th width="21%">Email</th>
-                    <th width="6%">Status</th>
-                    <th width="14%">Data de Cadastro</th>
-                    <th width="18%">Ações</th>
-                </tr>
-            </thead>
+        
 
             <tbody>
-                <?php foreach ($dao->listar("AND u.nm_usuario like '%$n%' AND u.nr_cpf like '%$c%'") as $usuario) { ?>
+                <?php 
+                $registers = $dao->listar("AND u.nm_usuario like '%$name%' AND u.nr_cpf like '%$cpf%'");
+                if(empty($registers)){
+                   echo "<br><br><h3 class='not-found'>Nenhum registro foi encontrado</h3>";
+                }else{
+                    echo "<table>
+                    <thead>
+                        <tr>
+                            <th width='25%'>Nome</th>
+                            <th width='16%''>CPF</th>
+                            <th width='21%'>Email</th>
+                            <th width='6%'>Status</th>
+                            <th width='14%'>Data de Cadastro</th>
+                            <th width='18%'>Ações</th>
+                        </tr>
+                    </thead>";
+                    foreach ($registers as $usuario) {;
+                ?>
                 <tr>
                     <td><?=$usuario->getNmUsuario()?></td>
                     <td><?=mask($usuario->getNrCpf(), '###.###.###-##')?></td>
@@ -31,18 +38,21 @@ $dao = new UsuarioDAO();
                     <td><?=$usuario->getAoStatus() ? "Ativo" : "Inativo" ?></td>
                     <td><?=date('d/m/Y', strtotime($usuario->getDtCadastro()))?></td>
                     <td>    
+                    <form action='Deletar.php' method="post">
                         <button type="submit" onclick="window.location.href='../index.php'">Editar</button>
-                        <button type="submit">Deletar</button>
+                        <button type="submit" name="id_usuario" value='<?= $usuario->getIdUsuario() ?>'>Deletar</button>
+                        </form>
                     </td>
                 </tr>
 
     
-                <?php } ?>
+                <?php } }?>
             </tbody>
 
             
         </table>
-        <div>
+        <div class='register'>
+            <br>    
     <button type="submit" onclick="window.location.href='GuiCadastroUsuario.php'">Cadastrar</button>
 
     </div>
