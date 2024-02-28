@@ -3,16 +3,18 @@ include_once DIR_PERSISTENCIA . 'UsuarioDAO.class.php';
 
 
 
-function listarComFiltro(){
-    $daoN = new UsuarioDAO();    
+function listarComFiltro($filter){
+    $daoN = new UsuarioDAO(); 
+    $name = $filter['name'];
+    $cpf = $filter['cpf'];
     //return $daoN->listar("AND user.nm_usuario like %$filter[name]% AND user.nr_cpf like %$filter[cpf]%");
-    return $daoN->listar("AND u.nm_usuario like '%us%' AND u.nr_cpf like '%1%'");
+    return $daoN->listar("AND u.nm_usuario like '%$name%' AND u.nr_cpf like '%$cpf%'");
 }
 
 
 
-
-$vetor = listarComFiltro();
+$vet = ['name' => 'us', 'cpf' => '1'];
+$vetor = listarComFiltro($vet);
 foreach ($vetor as $elemento) {
     echo 'Usuario: ' . $elemento->getNmUsuario() . '<br>'.  'CPF: ' . $elemento->getNrCpf() . '<br>';
 }
