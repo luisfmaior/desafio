@@ -23,7 +23,7 @@ $dao = new UsuarioDAO();
             </thead>
 
             <tbody>
-                <?php foreach ($dao->listar() as $usuario) { ?>
+                <?php foreach ($dao->listar("AND u.nm_usuario like '%$n%' AND u.nr_cpf like '%$c%'") as $usuario) { ?>
                 <tr>
                     <td><?=$usuario->getNmUsuario()?></td>
                     <td><?=mask($usuario->getNrCpf(), '###.###.###-##')?></td>

@@ -48,7 +48,7 @@ include_once DIR_UTIL . 'Define.php';
                     <p class="font10"></p>      
                 </p>
                 <p>
-                    4 - Criar uma area de filtro, que possa buscar por nome e cpf
+                    4 - Criar uma area de filtro, que possa buscar por nome e cpf ✓
                     <p class="font10"></p>      
                 </p>
                 <p>
