@@ -20,23 +20,23 @@ $usuario = $dao->edit($id_usuario);
        
         <div class="formulario-campos">
             <label>Nome</label>
-            <input type="text" name="nm_usuario" id="nm_usuario" value='<?= $usuario->getNmUsuario() ?>'>
+            <input type="text" name="nm_usuario" id="nm_usuario" value='<?= $usuario->getNmUsuario() ?>' required>
     
             <label>CPF</label>
-            <input type="text" name="nr_cpf" id="nr_cpf" value='<?= $usuario->getNrCpf() ?>'>
+            <input type="text" name="nr_cpf" id="nr_cpf" value='<?= $usuario->getNrCpf() ?>' required>
         </div>
     
         <div class="formulario-campos">
             <label>Login</label>
-            <input type="text" name="ds_login" id="ds_login" value='<?= $usuario->getDsLogin() ?>'>
+            <input type="text" name="ds_login" id="ds_login" value='<?= $usuario->getDsLogin() ?>' required>
 
             <label>Senha</label>
-            <input type="password" name="pw_senha" id="pw_senha" value='<?= $usuario->getPwSenha() ?>'>
+            <input type="password" name="pw_senha" id="pw_senha" value='<?= $usuario->getPwSenha() ?>' required>
         </div>
     
         <div class="formulario-campos">
             <label>Email</label>
-            <input type="text" name="ds_email" id="ds_email" value='<?= $usuario->getDsEmail() ?>'>
+            <input type="text" name="ds_email" id="ds_email" value='<?= $usuario->getDsEmail() ?>' required>
 
             <label>Perfil</label>
             <select name="id_perfil" id="id_perfil" > 

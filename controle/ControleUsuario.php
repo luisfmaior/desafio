@@ -28,7 +28,7 @@ try {
 
             $dao = new UsuarioDAO();
             $dao->cadastrar($usuario);
-            header("Location: ../visao/GuiUsuarios.php");
+            header("Location: ../visao/GuiUsuarios.php?sucesso=cadastro_realizado");
             break;
 
         //problema no Status
@@ -46,7 +46,7 @@ try {
             $usuario->setDtAlteracao(date('Y-m-d H:i'));
             $dao = new UsuarioDAO();
             $dao->update($usuario);
-            header("Location: ../visao/GuiUsuarios.php");
+            header("Location: ../visao/GuiUsuarios.php?sucesso=atualizacao_realizada");
             break;
     }
 } catch (Exception $exception) {

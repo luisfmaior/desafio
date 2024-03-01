@@ -12,23 +12,23 @@ include_once DIR_MODELO . 'UsuarioVO.class.php';
        
         <div class="formulario-campos">
             <label>Nome</label>
-            <input type="text" name="nm_usuario" id="nm_usuario" value="">
+            <input type="text" name="nm_usuario" id="nm_usuario" value="" required>
     
             <label>CPF</label>
-            <input type="text" name="nr_cpf" id="nr_cpf" value="">
+            <input type="text" name="nr_cpf" id="nr_cpf" value="" required>
         </div>
     
         <div class="formulario-campos">
             <label>Login</label>
-            <input type="text" name="ds_login" id="ds_login" value="">
+            <input type="text" name="ds_login" id="ds_login" value="" required>
 
             <label>Senha</label>
-            <input type="password" name="pw_senha" id="pw_senha" value="">
+            <input type="password" name="pw_senha" id="pw_senha" value="" required>
         </div>
     
         <div class="formulario-campos">
             <label>Email</label>
-            <input type="text" name="ds_email" id="ds_email" value="">
+            <input type="text" name="ds_email" id="ds_email" value="" required>
 
             <label>Perfil</label>
             <select name="id_perfil" id="id_perfil">

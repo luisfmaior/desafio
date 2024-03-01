@@ -8,6 +8,16 @@ include_once DIR_PERSISTENCIA . 'UsuarioDAO.class.php';
 $dao = new UsuarioDAO();
 ?>
 
+<?php
+if (isset($_GET['sucesso']) && $_GET['sucesso'] === 'cadastro_realizado') {
+    echo "<div class='container-filter'><h4> Cadastro realizado com sucesso! </h4></div>";
+}else if(isset($_GET['sucesso']) && $_GET['sucesso'] === 'atualizacao_realizada'){
+    echo "<div class='container-filter'><h4> Atualização realizada com sucesso! </h4></div>";
+}
+else{}
+?>
+
+
 <div class="conteudo">
     <div class="listagem" style="background: #fcfcfc; margin: 2em auto;width:85%;">
         

@@ -64,11 +64,11 @@ include_once DIR_UTIL . 'Define.php';
                 <br>
                 <p><strong>Modificar Tela de Cadastro de Usuários</strong></p>
                 <p>
-                    1 - Criar validação para não permitir salvar sem preencher todos os campos
+                    1 - Criar validação para não permitir salvar sem preencher todos os campos ✓
                     <p class="font10"></p>      
                 </p>
                 <p>
-                    2 - Após salvar redirecionar para tela de listagem, e mostrar mensagem de sucesso.
+                    2 - Após salvar redirecionar para tela de listagem, e mostrar mensagem de sucesso. ✓
                     <p class="font10"></p>      
                 </p>
                 <br>
