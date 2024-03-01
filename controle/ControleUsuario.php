@@ -48,6 +48,13 @@ try {
             $dao->update($usuario);
             header("Location: ../visao/GuiUsuarios.php?sucesso=atualizacao_realizada");
             break;
+
+        case 'delete':
+            $dao = new UsuarioDAO();
+            $id_usuario = $_POST['id_usuario'];
+            $dao->deletar($id_usuario);
+            header("Location: ../visao/GuiUsuarios.php?sucesso=exclusao_realizada");
+            exit;
     }
 } catch (Exception $exception) {
     die('Erro');

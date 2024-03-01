@@ -9,12 +9,22 @@ $dao = new UsuarioDAO();
 ?>
 
 <?php
-if (isset($_GET['sucesso']) && $_GET['sucesso'] === 'cadastro_realizado') {
-    echo "<div class='container-filter'><h4> Cadastro realizado com sucesso! </h4></div>";
-}else if(isset($_GET['sucesso']) && $_GET['sucesso'] === 'atualizacao_realizada'){
-    echo "<div class='container-filter'><h4> Atualização realizada com sucesso! </h4></div>";
-}
-else{}
+if(isset($_GET['sucesso'])){
+    switch($_GET['sucesso']){
+        case 'cadastro_realizado':
+            echo "<div class='container-filter'><h4> Cadastro realizado com sucesso! </h4></div>";
+            break;
+    
+        case 'atualizacao_realizada':
+            echo "<div class='container-filter'><h4> Atualização realizada com sucesso! </h4></div>";
+            break;
+    
+        case 'exclusao_realizada':
+            echo "<div class='container-filter'><h4 class='delete'> Exclusão realizada com sucesso! </h4></div>";
+            break;        
+    }
+    }
+    
 ?>
 
 
@@ -51,7 +61,7 @@ else{}
                     <form  class="form-button"action='Edit.php' method="POST">
                         <button type="submit" class="editButton" name="edit_usuario" onclick="window.location.href='../index.php'" value='<?= $usuario->getIdUsuario() ?>'>Editar</button>
                     </form>
-                    <form class="form-button" action='Deletar.php' method="POST">
+                    <form class="form-button" action='../controle/ControleUsuario.php?op=delete' method="POST">
                             <button type="submit" class="deleteButton" name="id_usuario" value='<?= $usuario->getIdUsuario() ?>'>Excluir</button>
                     </form>
                     </td>
