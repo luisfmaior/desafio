@@ -15,7 +15,7 @@ $usuario = $dao->edit($id_usuario);
 
 <div class="container">
     
-    <form class="form-horizontal" id="cadUsuario" method="POST" action="Update.php">
+    <form class="form-horizontal" id="cadUsuario" method="POST" action="../controle/ControleUsuario.php?op=update">
     
        
         <div class="formulario-campos">

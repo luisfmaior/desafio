@@ -78,7 +78,7 @@ include_once DIR_UTIL . 'Define.php';
                     <p class="font10"></p>      
                 </p>
                 <p>
-                    2 - Possibilitar edição dos dados.
+                    2 - Possibilitar edição dos dados. ✓
                     <p class="font10"></p>      
                 </p>
                 <p>
