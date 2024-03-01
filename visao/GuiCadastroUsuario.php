@@ -44,12 +44,13 @@ include_once DIR_MODELO . 'UsuarioVO.class.php';
         </div>
     
         <div class="botoes">
-            <button type="submit" class="">Salvar</button>
-            <button type="submit" onclick="window.location.href='../index.php'">Voltar</button>
+            <button type="submit" class="save-button">Cadastrar</button>
         </div>
     </form>
-    <button type="submit" onclick="window.location.href='GuiUsuarios.php'">Voltar</button>
+</div>
 
+<div class='botoes'>
+    <button type="submit" onclick="window.location.href='GuiUsuarios.php'">Voltar</button>
 </div>
 
 <?php
@@ -66,4 +67,5 @@ include_once 'Footer.php';
         float: right;
         margin: 3em 47%;
     }
+    
 </style>

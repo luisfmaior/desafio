@@ -104,4 +104,58 @@ class UsuarioDAO
             return false;
         }
     }
+
+    function edit($id){
+        try {
+            $query = "SELECT * FROM usuario WHERE id_usuario = {$id}";
+            $this->conexao = Conexao::connect()->prepare($query);
+            $this->conexao->execute();
+            $obj = $this->conexao->fetch(PDO::FETCH_ASSOC);
+
+                $usuario = new UsuarioVO();
+                $usuario->setIdUsuario($obj['id_usuario']);
+                $usuario->setNmUsuario($obj['nm_usuario']);
+                $usuario->setNrCpf($obj['nr_cpf']);
+                $usuario->setDsEmail($obj['ds_email']);
+                $usuario->setDsLogin($obj['ds_login']);
+                $usuario->setPwSenha($obj['pw_senha']);
+                $usuario->setIdPerfil($obj['id_perfil']);
+                $usuario->setAoStatus($obj['ao_status']);
+                $usuario->setIdUsuarioinclusao($obj['id_usuarioinclusao']);
+                $usuario->setIdUsuarioalteracao($obj['id_usuarioalteracao']);
+                $usuario->setDtCadastro($obj['dt_cadastro']);
+                $usuario->setDtAlteracao($obj['dt_alteracao']);
+            
+            $this->conexao = null;
+            return $usuario;
+        } catch (Exception $e) {
+            echo "Erro ao buscar os Usuario" . $e;
+            return false;
+        }
+    }
+
+    function update(UsuarioVO $usuario){
+
+        try {
+            // getAoStatus com problema no update
+            $sql = "UPDATE usuario SET 
+            nm_usuario = '{$usuario->getNmUsuario()}', 
+            ds_email = '{$usuario->getDsEmail()}',
+            nr_cpf = '{$usuario->getNrCpf()}',
+            ds_login = '{$usuario->getDsLogin()}',
+            pw_senha = '{$usuario->getPwSenha()}',
+            id_perfil = '{$usuario->getIdPerfil()}',
+            id_usuarioalteracao = '{$usuario->getIdUsuarioAlteracao()}',
+            dt_alteracao = now()
+            where id_usuario = {$usuario->getIdUsuario()}";
+            
+            $this->conexao = Conexao::connect()->prepare($sql);
+            $this->conexao->execute();
+            $this->conexao = null;
+            return true;
+        } catch (Exception $e) {
+            echo "Erro ao atualizar Usuario \n\n" . $e->getMessage();
+            return false;
+        }
+    }
 }

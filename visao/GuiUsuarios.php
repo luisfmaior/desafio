@@ -38,10 +38,12 @@ $dao = new UsuarioDAO();
                     <td><?=$usuario->getAoStatus() ? "Ativo" : "Inativo" ?></td>
                     <td><?=date('d/m/Y', strtotime($usuario->getDtCadastro()))?></td>
                     <td>    
-                    <form action='Deletar.php' method="post">
-                        <button type="submit" onclick="window.location.href='../index.php'">Editar</button>
-                        <button type="submit" name="id_usuario" value='<?= $usuario->getIdUsuario() ?>'>Deletar</button>
-                        </form>
+                    <form  class="form-button"action='Edit.php' method="POST">
+                        <button type="submit" class="editButton" name="edit_usuario" onclick="window.location.href='../index.php'" value='<?= $usuario->getIdUsuario() ?>'>Editar</button>
+                    </form>
+                    <form class="form-button" action='Deletar.php' method="POST">
+                            <button type="submit" class="deleteButton" name="id_usuario" value='<?= $usuario->getIdUsuario() ?>'>Excluir</button>
+                    </form>
                     </td>
                 </tr>
 
@@ -51,11 +53,7 @@ $dao = new UsuarioDAO();
 
             
         </table>
-        <div class='register'>
-            <br>    
-    <button type="submit" onclick="window.location.href='GuiCadastroUsuario.php'">Cadastrar</button>
-
-    </div>
+      
     </div>
 
     <div>
@@ -69,4 +67,8 @@ $dao = new UsuarioDAO();
         background-color: #006b85;
         color: #fff;
     }
+
+    .form-button {
+    display: inline-block; /* Define o formulário como inline-block */
+}
 </style>    

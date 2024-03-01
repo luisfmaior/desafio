@@ -7,7 +7,8 @@ function filter() {
 }
 </script>
 
-
+<br>
+<br>
 <div class='container-filter' >
 <form method="post" action="GuiUsuarios.php">
 <h3>Filtro</h3>

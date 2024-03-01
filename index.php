@@ -17,6 +17,12 @@ include_once DIR_UTIL . 'Define.php';
             <h1>Entrevista - Desenvolvimento Canoastec</h1>
         </header>
 
+        <div class="topnav">
+  <a class="active" href="../index.php">Home</a>
+  <a href="/visao/GuiUsuarios.php">Lista de Registros</a>
+  <a href="/visao/GuiCadastroUsuario.php">Cadastrar</a>
+</div>
+
         <div class="conteudo">
 
             <div class="conteudo-instrucao">
@@ -76,7 +82,7 @@ include_once DIR_UTIL . 'Define.php';
                     <p class="font10"></p>      
                 </p>
                 <p>
-                    3 - Criar menu com acesso as telas de cadastro e listagem.
+                    3 - Criar menu com acesso as telas de cadastro e listagem. ✓
                     <p class="font10"></p>      
                 </p>
                 <p>
